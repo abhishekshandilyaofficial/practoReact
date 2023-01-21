@@ -4,11 +4,10 @@ import SecondPage from './SecondPage';
 function MainPage(props) {
   const [flag, setFlag] = useState(false);
   let history = useHistory();
-  function changeProps(){
+ 
+  function nextPage(){
     setFlag(true);
     props.set(true);
-  }
-  function nextPage(){
     history.push('/secondPage');
   }
   let cards = [{
@@ -148,8 +147,7 @@ function MainPage(props) {
         </div>
         <div className='content-card'>
           <div className='banner'>
-              <img  onMouseOver={changeProps} onClick={nextPage} src="./images/chronic_consumer_banner_dweb.png" alt="Add"/>
-            
+              <img   onClick={nextPage} src="./images/chronic_consumer_banner_dweb.png" alt="Add"/>
           </div> 
         </div>
         <div className='static'>

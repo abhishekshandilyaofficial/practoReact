@@ -20,7 +20,7 @@ function App() {
       <Header flag={flag}></Header>
       <Switch>
         <Route exact path="/secondPage" component={SecondPage} />
-        <Route path="/" render={props => <MainPage set = {set()} />} />
+        <Route path="/" render={props => <MainPage set = {set} />} />
       </Switch>
         
        {/* <MainPage set={set} /> */}
