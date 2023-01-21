@@ -1,6 +1,29 @@
 import React from 'react'
-function Header() {
-  let products = ["Find Doctors", "Video Consult", "Medicines", "Lab Tests", "Surgeries"];
+function Header(props) {
+  let {flag} = props;
+  console.log(props);
+  let products = [{
+    "title":"Find Doctors",
+    "subtitle":"Book an appointment"
+  },
+  {
+    "title":"Video Consult",
+    "subtitle":"Consult top doctors"
+  },
+  {
+    "title":"Medicine",
+    "subtitle":"practo pharmacy"
+  },
+  {
+    "title":"Lab Tests",
+    "subtitle":"Book tests & checkup"
+  },
+  {
+    "title":"Surgeries",
+    "subtitle":"Expert surgical care"
+  }
+  ];
+  console.log("from header", flag);
   return (
     <div>
       <div className="header">
@@ -16,8 +39,8 @@ function Header() {
                 products.map(function(x){
                   return <div className='product-tab'>
                   <a className="product-tab-anchor" href="http://localhost:3000/" title="book">
-                    <div className="product-tab__title">{x}</div>
-                    <div className="product-tab__subtitle"></div>
+                    <div className="product-tab__title">{x.title}</div>
+                    <div className="product-tab__subtitle">{flag == true?x.subtitle:""}</div>
                   </a>
                 </div>
                 })

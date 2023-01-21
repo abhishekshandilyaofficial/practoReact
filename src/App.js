@@ -1,12 +1,24 @@
 import './App.css';
+import 'react-router-dom';
+import { Route,Switch } from 'react-router-dom';
 import Header from './Components/Header';
 import MainPage from './Components/MainPage';
 import Footer from './Components/Footer';
+import SecondPage from './Components/SecondPage';
+import { useState } from 'react';
 function App() {
+  
+  const [flag, setFlag] = useState('false');
+  console.log(flag);
+  function set(e){
+    console.log("app", flag)
+    setFlag(e);
+  }
+  console.log(flag)
   return (
     <div>
-      <Header></Header>
-      <MainPage></MainPage>
+      <Header flag={flag}></Header>
+       <MainPage set={set} />
       <Footer></Footer>
       
     </div>

@@ -90,6 +90,9 @@ function Footer() {
         </div>
         <div className="copy-right">Copyright © 2017, Practo. All rights reserved.</div>
       </div>
+      <div className='practo-fix'>
+              <img className='practo-fix-img' src = './Images/practo-fix.jpg'/>
+        </div>
     </div>
   )
 }
