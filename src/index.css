@@ -10,8 +10,15 @@ body {
 .header {
   height: 10vh;
   border: aliceblue;
+  margin-top: 0px;
   border-bottom: 2px solid grey;
   display: flex;
+  position:fixed;
+  bottom:90%;
+  /* right: 0%; */
+
+  background-color: white;
+  width: 100%;
 }
 .header  .nav-left {
   vertical-align: middle;
@@ -77,14 +84,15 @@ select {
 }
 .search-box-wrapper{
   display: flex;
-  margin-top: 20px;
   margin-left: 80px;
+  margin-top: 15vh;
 }
 
 .search-box-wrapper .search-box input{
   width: 250px;
   height: 40px;
   border-radius: 5px;
+  
   
 }
 .search-box-wrapper .try-plus {
@@ -316,7 +324,12 @@ select {
   width: 100%;
   display: flex;
   padding-bottom: 1%;
+  border-top: 1px solid black;
   border-bottom: 1px solid black;
+  position:fixed;
+  bottom:79%;
+  background-color: white;
+  right: 0%;
 }
 .s-product-tab{
   padding-right: 20px;

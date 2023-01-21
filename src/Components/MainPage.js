@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom';
 import SecondPage from './SecondPage';
 function MainPage(props) {
   const [flag, setFlag] = useState(false);
-  function forClick(){
+  let history = useHistory();
+  function changeProps(){
     setFlag(true);
     props.set(true);
   }
-  let products = ['Home', 'Healthy Hair', 'Healthy Eating', 'Healthy Skin', 'Weight loss'];
+  function nextPage(){
+    history.push('/secondPage');
+  }
   let cards = [{
     "img":"./Images/1.jpg",
     "head":"Instant Video Consultation",
@@ -128,8 +132,7 @@ function MainPage(props) {
   console.log("MainPage",flag)
   return (
     <div>
-      {
-        flag == false ?<div>
+        <div>
         <div className='search-box-wrapper'>
           <div className='search-box'>
             <input placeholder="Search location" value="Bangalore" />
@@ -145,7 +148,7 @@ function MainPage(props) {
         </div>
         <div className='content-card'>
           <div className='banner'>
-              <img  onClick={forClick} src="./images/chronic_consumer_banner_dweb.png" alt="Add"/>
+              <img  onMouseOver={changeProps} onClick={nextPage} src="./images/chronic_consumer_banner_dweb.png" alt="Add"/>
             
           </div> 
         </div>
@@ -224,17 +227,9 @@ function MainPage(props) {
                
                 })
               }
-              
             </div>
-            
         </div>
-        
       </div> 
-      :
-      <SecondPage />
-      
-      }
-      
     </div>
   )
 }

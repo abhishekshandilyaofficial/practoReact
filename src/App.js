@@ -18,7 +18,12 @@ function App() {
   return (
     <div>
       <Header flag={flag}></Header>
-       <MainPage set={set} />
+      <Switch>
+        <Route exact path="/secondPage" component={SecondPage} />
+        <Route path="/" render={props => <MainPage set = {set()} />} />
+      </Switch>
+        
+       {/* <MainPage set={set} /> */}
       <Footer></Footer>
       
     </div>

@@ -1,8 +1,7 @@
 import React from 'react'
-
+import { useHistory } from 'react-router-dom';
 function SecondPage() {
   let products = ['Home', 'Healthy Hair', 'Healthy Eating', 'Healthy Skin', 'Weight loss'];
-   
   return (
     <div>
         <div className='s-header'>
