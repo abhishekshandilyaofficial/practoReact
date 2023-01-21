@@ -96,6 +96,7 @@ select {
     height: 52vh;
     margin-left: 7vw;
     margin-top: 5vw;
+    cursor: pointer;
 }
 .static {
   display: flex;
@@ -390,6 +391,10 @@ select {
   padding-left: 10%;
   margin-top:20%
 }
-.popular-article-image{
-  background-size: cover; background-position: center center; background-repeat: no-repeat; width: inherit; height: inherit;
+.for-articles{
+  padding-left: 5%;
+}
+.popular-article a{
+  display: flex;
+  text-decoration: none;
 }
