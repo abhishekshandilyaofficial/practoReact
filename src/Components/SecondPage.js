@@ -25,7 +25,6 @@ function SecondPage() {
         </div>
         <div className="image-bgpage2" title="12 Coronavirus Myths and Facts That You Should Be Aware Of" >
                 <img src="https://www.practostatic.com/fit/510f25a73b354e487a0830b37ae42cea17f7b61d" />
-        </div>
         <div className='column-container'>
             <div className='blogs'>
                 <div className='writings'>
@@ -67,7 +66,7 @@ function SecondPage() {
                   </a>
               </div>
             <div className='for-articles'>
-              <div>Popular Articles</div>
+              <p>Popular Articles</p>
               <div className = 'popular-article'>
                   <a href="http://localhost:3000/">
                     <div><img src="./Images/pa1.jpg"/></div>
@@ -89,6 +88,8 @@ function SecondPage() {
             </div>
           </div>
         </div>
+        </div>
+        
     </div>
   )
 }

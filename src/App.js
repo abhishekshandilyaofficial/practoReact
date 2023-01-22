@@ -22,8 +22,6 @@ function App() {
         <Route exact path="/secondPage" component={SecondPage} />
         <Route path="/" render={props => <MainPage set = {set} />} />
       </Switch>
-        
-       {/* <MainPage set={set} /> */}
       <Footer></Footer>
       
     </div>
