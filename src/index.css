@@ -412,4 +412,6 @@ select {
 .popular-article a{
   display: flex;
   text-decoration: none;
+  color: black;
+  font-size: small;
 }
